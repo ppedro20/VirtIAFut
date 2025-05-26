@@ -2,6 +2,6 @@ TeamClassifier
 ResolveTeamsGoalkeeper
 Draw_Pitch
 ViewTransformer
-from sports.configs.soccer import SoccerPitchConfiguration
+SoccerPitchConfiguration
 
-tracking algorithms
+
