@@ -1,7 +1,0 @@
-TeamClassifier
-ResolveTeamsGoalkeeper
-Draw_Pitch
-ViewTransformer
-SoccerPitchConfiguration
-
-
