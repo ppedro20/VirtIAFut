@@ -4,6 +4,7 @@ import cv2
 import supervision as sv
 import numpy as np
 
+import os
 import sys
 sys.path.append(os.getenv("PROJECT_PATH"))
 from utils.pitchconfig import SoccerPitchConfiguration
