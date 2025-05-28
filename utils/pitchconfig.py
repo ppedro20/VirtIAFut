@@ -3,17 +3,17 @@ from typing import List, Tuple
 
 @dataclass
 class SoccerPitchConfiguration:
-    width: float = 70.0  # [m]
-    length: float = 120.0  # [m]
-    penalty_box_width: float = 41.0  # [m]
-    penalty_box_length: float = 20.15  # [m]
-    goal_box_width: float = 18.32  # [m]
-    goal_box_length: float = 5.5  # [m]
-    centre_circle_radius: float = 9.15  # [m]
-    penalty_spot_distance: float = 11.0  # [m]
+    width: int = 7000  # [cm]
+    length: int = 12000  # [cm]
+    penalty_box_width: int = 4100  # [cm]
+    penalty_box_length: int = 2015  # [cm]
+    goal_box_width: int = 1832  # [cm]
+    goal_box_length: int = 550  # [cm]
+    centre_circle_radius: int = 915  # [cm]
+    penalty_spot_distance: int = 1100  # [cm]
 
     @property
-    def vertices(self) -> List[Tuple[float, float]]:
+    def vertices(self) -> List[Tuple[int, int]]:
         return [
             (0, 0),  # 1
             (0, (self.width - self.penalty_box_width) / 2),  # 2

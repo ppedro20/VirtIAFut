@@ -9,6 +9,7 @@ import sys
 sys.path.append(os.getenv("PROJECT_PATH"))
 from utils.pitchconfig import SoccerPitchConfiguration
 
+# Draws a soccer pitch with specified dimensions, colors, and scale.
 def draw_pitch(
     config: SoccerPitchConfiguration,
     background_color: sv.Color = sv.Color(34, 139, 34),
@@ -18,28 +19,7 @@ def draw_pitch(
     point_radius: int = 8,
     scale: float = 0.1
 ) -> np.ndarray:
-    """
-    Draws a soccer pitch with specified dimensions, colors, and scale.
-
-    Args:
-        config (SoccerPitchConfiguration): Configuration object containing the
-            dimensions and layout of the pitch.
-        background_color (sv.Color, optional): Color of the pitch background.
-            Defaults to sv.Color(34, 139, 34).
-        line_color (sv.Color, optional): Color of the pitch lines.
-            Defaults to sv.Color.WHITE.
-        padding (int, optional): Padding around the pitch in pixels.
-            Defaults to 50.
-        line_thickness (int, optional): Thickness of the pitch lines in pixels.
-            Defaults to 4.
-        point_radius (int, optional): Radius of the penalty spot points in pixels.
-            Defaults to 8.
-        scale (float, optional): Scaling factor for the pitch dimensions.
-            Defaults to 0.1.
-
-    Returns:
-        np.ndarray: Image of the soccer pitch.
-    """
+    
     scaled_width = int(config.width * scale)
     scaled_length = int(config.length * scale)
     scaled_circle_radius = int(config.centre_circle_radius * scale)
@@ -97,7 +77,7 @@ def draw_pitch(
 
     return pitch_image
 
-
+# Draws points on a soccer pitch image.
 def draw_points_on_pitch(
     config: SoccerPitchConfiguration,
     xy: np.ndarray,
@@ -109,32 +89,7 @@ def draw_points_on_pitch(
     scale: float = 0.1,
     pitch: Optional[np.ndarray] = None
 ) -> np.ndarray:
-    """
-    Draws points on a soccer pitch.
-
-    Args:
-        config (SoccerPitchConfiguration): Configuration object containing the
-            dimensions and layout of the pitch.
-        xy (np.ndarray): Array of points to be drawn, with each point represented by
-            its (x, y) coordinates.
-        face_color (sv.Color, optional): Color of the point faces.
-            Defaults to sv.Color.RED.
-        edge_color (sv.Color, optional): Color of the point edges.
-            Defaults to sv.Color.BLACK.
-        radius (int, optional): Radius of the points in pixels.
-            Defaults to 10.
-        thickness (int, optional): Thickness of the point edges in pixels.
-            Defaults to 2.
-        padding (int, optional): Padding around the pitch in pixels.
-            Defaults to 50.
-        scale (float, optional): Scaling factor for the pitch dimensions.
-            Defaults to 0.1.
-        pitch (Optional[np.ndarray], optional): Existing pitch image to draw points on.
-            If None, a new pitch will be created. Defaults to None.
-
-    Returns:
-        np.ndarray: Image of the soccer pitch with points drawn on it.
-    """
+    
     if pitch is None:
         pitch = draw_pitch(
             config=config,
@@ -164,7 +119,7 @@ def draw_points_on_pitch(
 
     return pitch
 
-
+# Draws paths on a soccer pitch.
 def draw_paths_on_pitch(
     config: SoccerPitchConfiguration,
     paths: List[np.ndarray],
@@ -174,28 +129,7 @@ def draw_paths_on_pitch(
     scale: float = 0.1,
     pitch: Optional[np.ndarray] = None
 ) -> np.ndarray:
-    """
-    Draws paths on a soccer pitch.
-
-    Args:
-        config (SoccerPitchConfiguration): Configuration object containing the
-            dimensions and layout of the pitch.
-        paths (List[np.ndarray]): List of paths, where each path is an array of (x, y)
-            coordinates.
-        color (sv.Color, optional): Color of the paths.
-            Defaults to sv.Color.WHITE.
-        thickness (int, optional): Thickness of the paths in pixels.
-            Defaults to 2.
-        padding (int, optional): Padding around the pitch in pixels.
-            Defaults to 50.
-        scale (float, optional): Scaling factor for the pitch dimensions.
-            Defaults to 0.1.
-        pitch (Optional[np.ndarray], optional): Existing pitch image to draw paths on.
-            If None, a new pitch will be created. Defaults to None.
-
-    Returns:
-        np.ndarray: Image of the soccer pitch with paths drawn on it.
-    """
+    
     if pitch is None:
         pitch = draw_pitch(
             config=config,
