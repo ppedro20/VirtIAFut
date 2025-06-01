@@ -10,8 +10,8 @@ from transformers import AutoProcessor, SiglipVisionModel
 
 V = TypeVar("V")
 
-SIGLIP_MODEL_PATH = 'google/siglip-base-patch16-224'
-
+#SIGLIP_MODEL_PATH = 'google/siglip-base-patch16-224'
+SIGLIP_MODEL_PATH = 'google/siglip2-base-patch16-224'
 
 def create_batches(
     sequence: Iterable[V], batch_size: int
