@@ -26,8 +26,8 @@ def resolve_goalkeepers_team_id(
         nearest_1 = np.min(np.linalg.norm(team_1_xy - goalkeeper_xy, axis=1))
 
         # Weighted score: closer centroid + closer nearest player
-        score_0 = dist_centroid_0 * 0.6 + nearest_0 * 0.4
-        score_1 = dist_centroid_1 * 0.6 + nearest_1 * 0.4
+        score_0 = dist_centroid_0 * 0.5 + nearest_0 * 0.5
+        score_1 = dist_centroid_1 * 0.5 + nearest_1 * 0.5
 
         goalkeepers_team_id.append(0 if score_0 < score_1 else 1)
 
