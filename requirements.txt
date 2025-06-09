@@ -27,6 +27,7 @@ pyyaml
 # Visualization and tracking tools
 supervision
 umap-learn
+ultralytics
 
 # (Optional) Notebook support
 jupyter
