@@ -1,7 +1,7 @@
-# PyTorch (CPU-only)
-torch==2.3.0+cpu
-torchvision==0.18.0+cpu
-torchaudio==2.3.0+cpu
+# PyTorch (auto-resolve CPU/GPU)
+torch==2.3.0
+torchvision==0.18.0
+torchaudio==2.3.0
 
 # Core ML / Vision
 numpy==1.26.4
@@ -14,8 +14,8 @@ seaborn
 scipy
 pandas
 
-# Transformers (SigLIP and other Hugging Face models)
-transformers
+# Transformers (optional; if used)
+transformers==4.40.1
 sentencepiece
 
 # Roboflow SDK + env handling
