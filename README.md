@@ -7,3 +7,16 @@ How to run:
 ```
 pip install -r requirements.txt --index-url https://download.pytorch.org/whl/cpu --extra-index-url https://pypi.org/simple
 ```
+
+
+**Current Results**
+
+Real Data - with Linear Interpolation
+
+![Soccer Animation](data\animations\true_frames.gif "Real Data")
+
+Transformer
+
+![Soccer Animation](data\animations\pred_frames_tf.gif "TF")
+
+LSTM - soon
