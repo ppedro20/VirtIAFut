@@ -8,8 +8,9 @@ How to run:
 pip install -r requirements.txt --index-url https://download.pytorch.org/whl/cpu --extra-index-url https://pypi.org/simple
 ```
 
+**Video of Detections Tracking**
 
-**Current Results**
+**Current Results of Predictions**
 
 Real Data - with Linear Interpolation
 
@@ -19,4 +20,6 @@ Transformer
 
 ![Soccer Animation](data/animations/pred_frames_tf.gif "TF")
 
-LSTM - soon
+LSTM
+
+![Description](data/animations/lstm88_frames.gif "lstm")
