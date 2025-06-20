@@ -87,7 +87,9 @@ def draw_points_on_pitch(
     thickness: int = 2,
     padding: int = 50,
     scale: float = 0.1,
-    pitch: Optional[np.ndarray] = None
+    pitch: Optional[np.ndarray] = None,
+    labels: Optional[list] = None  # Changed type hint to list
+    
 ) -> np.ndarray:
     
     if pitch is None:
@@ -97,7 +99,7 @@ def draw_points_on_pitch(
             scale=scale
         )
 
-    for point in xy:
+    for i, point in enumerate(xy):
         scaled_point = (
             int(point[0] * scale) + padding,
             int(point[1] * scale) + padding
@@ -116,6 +118,25 @@ def draw_points_on_pitch(
             color=edge_color.as_bgr(),
             thickness=thickness
         )
+        # Draw label if provided
+        if labels is not None and i < len(labels):
+            text = str(labels[i])
+            font = cv2.FONT_HERSHEY_SIMPLEX
+            font_scale = 0.5
+            thickness_text = 1
+            (text_width, text_height), baseline = cv2.getTextSize(text, font, font_scale, thickness_text)
+            text_x = scaled_point[0] - text_width // 2
+            text_y = scaled_point[1] + text_height // 2
+            cv2.putText(
+                img=pitch,
+                text=text,
+                org=(text_x, text_y),
+                fontFace=font,
+                fontScale=font_scale,
+                color=(255, 255, 255),  # black text
+                thickness=thickness_text,
+                lineType=cv2.LINE_AA
+            )
 
     return pitch
 
