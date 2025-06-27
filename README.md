@@ -18,8 +18,8 @@ Real Data - with Linear Interpolation
 
 Transformer
 
-![Soccer Animation](data/animations/pred_frames_tf.gif "TF")
+![Soccer Animation](data/animations/tf+train_frames.gif "TF")
 
 LSTM
 
-![Description](data/animations/lstm88_frames.gif "lstm")
+![Description](data/animations/lstm88+train_frames.gif "lstm")
