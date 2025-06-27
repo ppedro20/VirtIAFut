@@ -14,7 +14,7 @@ pip install -r requirements.txt --index-url https://download.pytorch.org/whl/cpu
 
 Real Data - with Linear Interpolation
 
-![Soccer Animation](data/animations/true_frames.gif "Real Data")
+![Soccer Animation](data/animations/frames60s.gif "Real Data")
 
 Transformer
 
