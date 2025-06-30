@@ -1,4 +1,0 @@
-[] video 60s + virtualization side by side
-[X] 1 team real data + 1 team lstm same field
-[X] 1 team real data + 1 team tf same field
-[X] together for both
