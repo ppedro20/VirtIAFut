@@ -36,10 +36,6 @@ Players and Ball Detection: https://universe.roboflow.com/roboflow-jvuqo/footbal
 
 Keypoints Detection: https://universe.roboflow.com/roboflow-jvuqo/football-field-detection-f07vi/model/14
 
-
-**Video of Detections Tracking**
-
-
 **Current Results of Predictions**
 
 Real Data - with Linear Interpolation
